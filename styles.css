@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*CSS RESET*/
+body {
+    background-color: rgb(164, 211, 183);
+    padding: 16px;
+    color: black;
+    line-height: 1;
+    font-family: darker Georgia, 'Times New Roman', Times, serif;
+}
+h1 {
+    font-size: 40px;
+}
+.score {
+    font-size: 32px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.game-container {
+    width: 484px;
+}
+.game-panel {
+ color: rgb(12, 12, 12);
+}
+/*TABELLONE DI GIOCO*/
+.game-board {
+    position: relative;
+    border: 2px solid black;
+
+}
+.grid {
+    height: 480px;
+    width: 480px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+.cell {
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+
+}
+.cell-dark {
+   background-color: rgb(204, 240, 237);
+}
+.cell:hover,
+.cell-clicked {
+    background-color:rgb(77, 158, 108);;
+
+}
+.cell-bomb {
+    background-color: orange;
+    background-image: url(./images/visual-effect_10106759.png);
+    background-size: contain;
+}
+    /*SCHERMATA FINE GIOCO*/
+.end-game-screen {
+    position: absolute;
+    top:0 ;
+    left: 0;
+    bottom:0 ;
+    right: 0;
+    background-color: rgb(236, 158, 13, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.win {
+    background-color: rgb(189, 230, 129, 0.6);
+}
+.end-game-text {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 48px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+
+}
+button { 
+    border: 2px solid black;
+    font-size: 24px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    padding: 4px 20px 4px 20px;
+    cursor: pointer;
+}
+button:hover {
+   background-color: aliceblue;
+}
+.hidden {
+    display: none;
+}
+.cell-clicked,
+.cell-bomb {
+    cursor:not-allowed;
+}
+audio {
+    margin-top: 20px;
+    width: 480px;
+    color: blue;
+}
